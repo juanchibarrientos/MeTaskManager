@@ -6,6 +6,7 @@ TODO:
 	- "Task" column expand
 	- Jump from NULL tasks
 	- Update "Add" button sensitive
+	- Set Application icon
 	
 FIXED: 
 	- Fix hour and date
