@@ -37,9 +37,6 @@ class Pi : public Date, public Time, public Task {
 		void set_hour( int h );
 		void set_minutes( int m );
 		void set_seconds( int s );
-		/*char * get_db();*/
-		
-		// EXTRAS
 					
 	private:
 		std::string pixbuf_path;

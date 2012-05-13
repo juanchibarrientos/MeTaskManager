@@ -56,7 +56,6 @@ void Plain::plain_read_all( Pi vector[], int mode) {
 							cout << "ID: " << buffer << endl;	
 						}
 						// ID DEFINES LATER...
-						//vector[x].set_id(atoi(buffer.c_str()));
 						getline ( plain_file, buffer );
 						if ( mode == 1) {
 							cout << "TASK: " << buffer << endl;	
@@ -71,7 +70,7 @@ void Plain::plain_read_all( Pi vector[], int mode) {
 						if ( mode == 1) {
 							cout << "DATE: " << buffer << endl;	
 						}
-						/// Tokens Divide
+						// Tokens Divide
   						string  temp;
 						int date[3];
 						int time[3];
@@ -116,28 +115,15 @@ void Plain::plain_read_all( Pi vector[], int mode) {
 	if ( mode == 1) {
 		std::cout << "Counter: " << counter << std::endl;
 	}
-	// CORRECT NULL RANDOM ID's
-	
-	
-		
    	plain_file.close();
   	}
-	else {
-		counter = 0;
-		//cout << "Unable to read file: " << file << "\n"; 
-	}
+	else { counter = 0;	}
 
-	for(x=0; x < DB_SIZE; x++) {
-		vector[x].set_id(x+1);
-	}
+	for(x=0; x < DB_SIZE; x++) { vector[x].set_id(x+1); }
 
 }
-void Plain::set_file(char* f) {
-	file = f;
-}
-char* Plain::get_file() {
-	return file;
-}
+void Plain::set_file(char* f) {	file = f; }
+char* Plain::get_file() { return file; }
 void Plain::populate_tasks(Pi v[], Pi vector[]) {
 	std::cout << "INFO: Populating tasks..." << std::endl;
 	for ( int x = 0; x < DB_SIZE; x++ ) {
@@ -152,7 +138,6 @@ void Plain::populate_tasks(Pi v[], Pi vector[]) {
 }
 void Plain::print_contents(Pi v[]) {
 	for ( int x = 0; x < DB_SIZE; x++ ) {
-	//v[x] = vector[x];
 		if(v[x].get_task() != "NULL") {
 			std::cout << "task[" << x+1 << "] -> " << v[x].get_task() << std::endl;
 		}
@@ -180,6 +165,4 @@ void Plain::update_db(Pi vector[]) {
 	std::cout << "INFO: Populating DB..." << std::endl;
 	plain_read_all(vector, 0);
 }
-int Plain::get_counter() {	
-	return counter;
-}
+int Plain::get_counter() { return counter; }

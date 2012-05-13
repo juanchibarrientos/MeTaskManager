@@ -1,1 +1,11 @@
 MeTaskManager... a simple project in C++ for learning purposes
+
+TODO:
+	- Edit Tasks
+	- About Dialog
+	- "Task" column expand
+	- Jump from NULL tasks
+	- Update "Add" button sensitive
+	
+FIXED: 
+	- Fix hour and date

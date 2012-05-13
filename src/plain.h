@@ -23,7 +23,6 @@ class Plain {
 		void update_db(Pi vector[]);
 		int get_counter();
 		
-		
 	private:
 		char* file;
 		int counter;
